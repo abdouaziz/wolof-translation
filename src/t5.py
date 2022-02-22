@@ -98,7 +98,20 @@ def parse_args():
 
 
 class NMTDataset(Dataset):
+    """
+    Dataset Class 
+    
+    """
     def __init__(self, frenchs, wolofs , tokenizer , max_len_source , max_len_target):
+        """
+        Parameters :
+        ------------
+        frenchs : 
+        wolofs  : 
+        tokenizer:
+        max_len_sourrce:
+        max_len_target: 
+        """
         self.frenchs = frenchs
         self.wolofs = wolofs
         self.tokenizer = tokenizer
@@ -207,6 +220,8 @@ def train_epoch (model , data_loader, optimizer , device , scheduler):
              
             print('Epoch: {} | loss: {} '.format(step+1, np.mean(losses)))
 
+
+ 
 
 def train():
 
